@@ -1,18 +1,4 @@
 const data = {
-    users: [
-        {
-          name: 'John',
-          email: 'admin@example.com',
-          
-          isAdmin: true,
-        },
-        {
-          name: 'Jane',
-          email: 'user@example.com',
-          
-          isAdmin: false,
-        },
-      ],
       products: [
         {
           name: 'Free Shirt',
