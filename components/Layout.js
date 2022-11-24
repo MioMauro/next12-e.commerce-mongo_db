@@ -5,12 +5,12 @@ import { Store } from '../utils/Store';
 
 export default function Layout({ title, children }) {
     const { status, data: session } = useState();
-  
+
     const { state, dispatch } = useContext(Store);
     const { cart } = state;
     const [cartItemsCount, setCartItemsCount] = useState(0);
     useEffect(() => {
-      setCartItemsCount(cart.cartItems.reduce((a, c) => a + c.quantity, 0));
+    setCartItemsCount(cart.cartItems.reduce((a, c) => a + c.quantity, 0));
     }, [cart.cartItems]);
 return (
     <>
@@ -28,14 +28,14 @@ return (
                     </Link>
                     <div className='flex'>
                         <Link legacyBehavior href="/cart">
-                <a className="p-2">
+                <div className="p-2 cursor-pointer">
                 Cart
                 {cartItemsCount > 0 && (
                     <span className="ml-1 rounded-full bg-red-600 px-2 py-1 text-xs font-bold text-white">
                     {cartItemsCount}
                     </span>
                 )}
-                </a>
+                </div>
                 </Link>
                     <Link href="/login"><p className='p-2'>Login</p></Link>
                     </div>
