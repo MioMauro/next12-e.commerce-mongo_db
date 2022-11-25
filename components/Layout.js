@@ -5,7 +5,6 @@ import { Store } from '../utils/Store';
 
 export default function Layout({ title, children }) {
     const { status, data: session } = useState();
-
     const { state, dispatch } = useContext(Store);
     const { cart } = state;
     const [cartItemsCount, setCartItemsCount] = useState(0);

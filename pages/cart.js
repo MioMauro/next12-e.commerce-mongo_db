@@ -95,7 +95,7 @@ return (
                                 </div>
                             </li>
                             <li>
-                                <button onClick={()=> router.push('/shipping')}
+                                <button onClick={()=> router.push('Login?redirect=/shipping')}
                                 className='primary-button w-full'>
                                     Check Out
                                 </button>
