@@ -6,26 +6,27 @@ export default function ProductItem({ product, addToCartHandler }) {
   return (
     <div className="card">
       <Link href={`/product/${product.slug}`}>
-        <div>
+        <a>
           <img
             src={product.image}
             alt={product.name}
             className="rounded shadow object-cover h-64 w-full"
           />
-        </div>
+        </a>
       </Link>
       <div className="flex flex-col items-center justify-center p-5">
         <Link href={`/product/${product.slug}`}>
-          <div>
+          <a>
             <h2 className="text-lg">{product.name}</h2>
-          </div>
+          </a>
         </Link>
         <p className="mb-2">{product.brand}</p>
         <p>${product.price}</p>
-        <button onClick={() => addToCartHandler(product)}
+        <button
           className="primary-button"
           type="button"
-          >          
+          onClick={() => addToCartHandler(product)}
+        >
           Add to cart
         </button>
       </div>
